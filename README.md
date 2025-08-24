@@ -79,3 +79,14 @@ To evaluate your model’s fit, apply visualization, methods like regression and
 Use **Mean Square Error (MSE)** to measure the average of the squares of the errors between actual and predicted values and **examine R-squared** to understand the proportion of the variance in the dependent variable that is predictable from the independent variables.
 
 When analyzing residual plots, residuals should be randomly distributed around zero for a good model. In contrast, a residual plot curve or inaccuracies in certain ranges suggest non-linear behavior or the need for more data.
+
+AI coach:
+Key Components: In linear regression, ( m ) represents the slope of the line (the coefficient), which indicates how much ( y ) changes for a unit change in ( x ). ( c ) is the y-intercept, which is the value of ( y ) when ( x ) is zero.
+
+Target and Independent Variables: The target variable ( y ) is what you are trying to predict, while ( x ) (or multiple ( x ) values in multiple linear regression) are the features or predictors.
+
+Model Fitting: The goal of linear regression is to find the best-fitting line through the data points, which minimizes the difference between the observed values and the values predicted by the model. This is often done using a method called "least squares."
+
+In a well-fitted linear regression model, the residuals (the differences between the observed values and the predicted values) should not show any discernible pattern when plotted against the predicted values. This randomness indicates that the model has captured the underlying relationship in the data well, and any remaining variation is due to random noise.
+
+If the residuals show a pattern, it may suggest that the model is not adequately capturing the relationship, and you might need to consider a more complex model or check for other issues like non-linearity.
