@@ -90,3 +90,15 @@ Model Fitting: The goal of linear regression is to find the best-fitting line th
 In a well-fitted linear regression model, the residuals (the differences between the observed values and the predicted values) should not show any discernible pattern when plotted against the predicted values. This randomness indicates that the model has captured the underlying relationship in the data well, and any remaining variation is due to random noise.
 
 If the residuals show a pattern, it may suggest that the model is not adequately capturing the relationship, and you might need to consider a more complex model or check for other issues like non-linearity.
+
+### Cheat Sheet: Model Development
+
+|Process | Description | COde Example|
+|---|---|---|
+|Linear Regression|Create a Linear Regression model object|from sklearn.linear_model import LinearRegression
+lr = LinearRegression()|
+|Train Linear Regression model Model|Train the Linear Regression model on decided data, separating Input and Output attributes. When there is single attribute in input, then it is simple linear regression. When there are multiple attributes, it is multiple linear regression.|X = df[[‘attribute_1’, ‘attribute_2’, ...]]
+Y = df['target_attribute']
+lr.fit(X,Y)|
+
+
