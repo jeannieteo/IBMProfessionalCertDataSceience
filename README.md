@@ -79,7 +79,7 @@ To evaluate your model’s fit, apply visualization, methods like regression and
 Use **Mean Square Error (MSE)** to measure the average of the squares of the errors between actual and predicted values and **examine R-squared** to understand the proportion of the variance in the dependent variable that is predictable from the independent variables.
 
 When analyzing residual plots, residuals should be randomly distributed around zero for a good model. In contrast, a residual plot curve or inaccuracies in certain ranges suggest non-linear behavior or the need for more data.
-
+ 
 AI coach:
 Key Components: In linear regression, ( m ) represents the slope of the line (the coefficient), which indicates how much ( y ) changes for a unit change in ( x ). ( c ) is the y-intercept, which is the value of ( y ) when ( x ) is zero.
 
@@ -95,10 +95,11 @@ If the residuals show a pattern, it may suggest that the model is not adequately
 
 |Process | Description | COde Example|
 |---|---|---|
-|Linear Regression|Create a Linear Regression model object|from sklearn.linear_model import LinearRegression
-lr = LinearRegression()|
-|Train Linear Regression model Model|Train the Linear Regression model on decided data, separating Input and Output attributes. When there is single attribute in input, then it is simple linear regression. When there are multiple attributes, it is multiple linear regression.|X = df[[‘attribute_1’, ‘attribute_2’, ...]]
-Y = df['target_attribute']
-lr.fit(X,Y)|
-
-
+|Linear Regression|Create a Linear Regression model object|from sklearn.linear_model import LinearRegression <br> lr = LinearRegression()|
+|Train Linear Regression model Model|Train the Linear Regression model on decided data, separating Input and Output attributes. When there is single attribute in input, then it is simple linear regression. When there are multiple attributes, it is multiple linear regression.|X = df[[‘attribute_1’, ‘attribute_2’, ...]]<br>Y = df['target_attribute']<br>lr.fit(X,Y)|
+|Generate output predictions|Predict the output for a set of Input attribute values.|Y_hat = lr.predict(X)|
+|Identify coeff and intercept|Identify the slope coefficient and intercept values of the linear regression model defined by y = mx+c  Where m is the slope coefficient and c is the intercept.|coeff = lr.coef<br>intercept = lr.intercept_|
+|REsidual plot|This function will regress y on x (possibly as a robust or polynomial regression) and then draw a scatterplot of the residuals.|import seaborn as sns<br>sns.residplot(x=df['attribute_1'], y=df['attribute_2'])|
+|Distribution plot|This function can be used to plot the distribution of data w.r.t. a given attribute.|import seaborn as sns  <br>sns.distplot(df['attribute_name'], hist=False) #can include other parameters like color, label and so on.|
+|Polynomial Regression|Available under the numpy package, for single variable feature creation and model fitting.|f = np.polyfit(x, y, n)<br>#creates the polynomial features of order n<br>p = np.poly1d(f)<br>#p becomes the polynomial model used to generate the predicted output<br>Y_hat = p(x)<br>#Y_hat is the predicted output|
+|Multi-variate Polynomial Regression|	Generate a new feature matrix consisting of all polynomial combinations of the features with the degree less than or equal to the specified degree.|from sklearn.preprocessing import PolynomialFeatures<br>Z = df[[‘attribute_1’,’attribute_2’,...]] <br>pr=PolynomialFeatures(degree=n)<br>Z_pr=pr.fit_transform(Z)|
