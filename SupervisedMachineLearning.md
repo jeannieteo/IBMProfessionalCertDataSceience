@@ -32,3 +32,27 @@ In summary, SVR applies the principles of SVM to regression tasks by focusing on
 + PolyNomial
 + RBF
 + Sigmoid
+
+
+## Cheat Sheet
+|Process Name|Description|Code|
+|---|--|---|
+|One vs One classifier (using logistic regression)||from sklearn.multiclass import OneVsOneClassifier<br>from sklearn.linear_model import LogisticRegression<br>model = OneVsOneClassifier(LogisticRegression())|
+|One vs All classifier (using logistic regression)||from sklearn.multiclass import OneVsRestClassifier<br>from sklearn.linear_model import LogisticRegression<br>model = OneVsRestClassifier(LogisticRegression())<br>OR<br>from sklearn.linear_model import LogisticRegression<br>model_ova = LogisticRegression(multi_class='ovr')|
+|Decision tree classifier||from sklearn.tree import DecisionTreeClassifier<br>model = DecisionTreeClassifier(max_depth=5)|
+|Decision tree regressor||from sklearn.tree import DecisionTreeRegressor<br>model = DecisionTreeRegressor(max_depth=5)|
+|Linear SVM classifier||from sklearn.svm import SVC<br>model = SVC(kernel='linear', C=1.0)|
+|K-nearest neighbors classifier||from sklearn.neighbors import KNeighborsClassifier<br>model = KNeighborsClassifier(n_neighbors=5, weights='uniform')|
+|Random Forest regressor||from sklearn.ensemble import RandomForestRegressor<br>model = RandomForestRegressor(n_estimators=100, max_depth=5)|
+|XGBoost regressor||import xgboost as xgb<br>model = xgb.XGBRegressor(n_estimators=100, learning_rate=0.1, max_depth=5)|
+
+## Associate Functions used
+|Medthod Name|Descripton|Code Syntax|
+|--|--|--|
+|OneHotEncoder|Transforms categorical features into a one-hot encoded matrix.|from sklearn.preprocessing import OneHotEncoder<br>encoder = OneHotEncoder(sparse=False)<br>encoded_data = encoder.fit_transform(categorical_data)|
+|accuracy_score|Computes the accuracy of a classifier by comparing predicted and true labels.|from sklearn.metrics import accuracy_score<br>accuracy = accuracy_score(y_true, y_pred)|
+|LabelEncoder|Encodes labels (target variable) into numeric format.|from sklearn.preprocessing import LabelEncoder<br>encoder = LabelEncoder()<br>encoded_labels = encoder.fit_transform(labels)|
+|plot_tree|PLots a decision tree for visualization.|from sklearn.tree import plot_tree<br>plot_tree(model, max_depth=3, filled=True)|
+|normalize|Scales each feature to have zero mean and unit variance (standardization).|from sklearn.preprocessing import normalize<br>normalized_data = normalize(data, norm='l2')|
+|compute_sample_weight|Computes the sample weights for imbalanced datasets.|from sklearn.utils.class_weight import compute_sample_weight<br>weights = compute_sample_weight(class_weight='balanced', y=y)|
+|roc_auc_score|Computes the Area Under the Receiver Operating Characteristic Curve (AUC-ROC) for binary classification models.|from sklearn.metrics import roc_auc_score<br>auc = roc_auc_score(y_true, y_score)|
