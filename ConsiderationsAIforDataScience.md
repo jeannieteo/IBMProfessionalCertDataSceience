@@ -1,3 +1,21 @@
+### AI for DataScience
+
+##### Prompts for generating data insights and visualizations
+|Task|Prompt|
+|---|---|
+|Generate a statistical description of data.|Write a Python code to generate the statistical description of all the features used in the data set. Include "object" data types as well.|
+|Create regression plots between a target variable and a continuous valued source variable.|Write a Python code to generate a regression plot between a target variable and a source variable of a data frame.|
+|Create box plots between a target and categorical source variable.|Write a Python code to generate a box plot between a target variable and a source variable of a data frame.|
+|Evaluate parametric interdependence using correlation, p-value and pearson coefficient|Write a Python code to evaluate correlation, pearson coefficient, and p-values for all attributes of a data frame against the target attribute.||Group variables to create pivot tables. Create a p-color plot for the pivot table.|Write a Python code that performs the following actions: <br> 1. Groups three attributes as available in a data frame df. <br> 2. Creates a pivot table for this group, using a target attribute and aggregation function as mean. <br> 3. Plots a pcolor plot for this pivot table.|
+##### Prompts for model development and refinement
+|Task|Prompt|
+|---|---|
+|Linear regression between a single source attribute and target attribute and evaluate it|Write a Python code that performs the following tasks: <br> 1. Develops and trains a linear regression model that uses one attribute of a data frame as the source variable and another as a target variable. <br> 2. Calculates and displays the MSE and R^2 values for the trained model.|
+|Linear regression between multiple source attributes and target attributes and evaluate it|Write a Python code that performs the following tasks: <br> 1. Develops and trains a linear regression model that uses some attributes of a data frame as the source variables and one of the attributes as a target variable. <br> 2. Calculates and displays the MSE and R^2 values for the trained model.|
+|Polynomial regression model with single source and target variable|Write a Python code that performs the following tasks: <br> 1. Develops and trains multiple polynomial regression models, with orders 2, 3, and 5, that use one attribute of a data frame as the source variable and another as a target variable. <br> 2. Calculates and displays the MSE and R^2 values for the trained models. <br> 3. Compares the performance of the models.|
+|Pipeline creation for scaling, polynomial feature creation, and linear regression|Write a Python code that performs the following tasks: <br> 1. Create a pipeline that performs parameter scaling, polynomial feature generation, and linear regression. Use the set of multiple features as before to create this pipeline. <br> 2. Calculate and display the MSE and R^2 values for the trained model.|
+|Grid search with ridge regression and cross validation|Write a Python code that performs the following tasks: <br> 1. Use polynomial features for some of the attributes of a data frame. <br> 2. Perform a grid search on a ridge regression model for a set of values of hyperparameter alpha and polynomial features as input. <br> 3. Use cross-validation in the grid search. <br> 4. Evaluate the resulting model's MSE and R^2 values.|
+
 #### Exercise 1:
 You are developing a generative AI system that creates personalized content recommendations for users. The system seems to consistently recommend content that aligns with certain cultural and demographic biases.
 Users from diverse backgrounds are expressing concern about the lack of transparency and fairness in the recommendations. How do you maintain transparency and fairness in your AI system?
